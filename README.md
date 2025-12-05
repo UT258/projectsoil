@@ -258,7 +258,7 @@ Contributions, issues, and feature requests are welcome!
 
 ## 👨‍💻 Author
 
-Built with ❤️ for ESP32 enthusiasts
+Utkarsh Singh
 
 ## 🌟 Acknowledgments
 
