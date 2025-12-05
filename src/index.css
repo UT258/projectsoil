@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: linear-gradient(135deg, #e0e7ff 0%, #ede9fe 100%);
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --text-strong: #0f172a;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+body[data-theme='dark'] {
+  --bg: radial-gradient(circle at 20% 20%, #0b1224, #0a0f1e 35%, #0a0e1c 70%);
+  --surface: #0f172a;
+  --surface-2: #111827;
+  --text-strong: #e2e8f0;
+  --text-muted: #cbd5e1;
+  --border: #1f2937;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg);
+  min-height: 100vh;
+  transition: background 0.4s ease, color 0.3s ease;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+body[data-theme='dark'] .stat-card,
+body[data-theme='dark'] .chart-card,
+body[data-theme='dark'] .analytics-card,
+body[data-theme='dark'] .insights-section,
+body[data-theme='dark'] .history-table-container,
+body[data-theme='dark'] .empty-state,
+body[data-theme='dark'] .settings-section,
+body[data-theme='dark'] .settings-actions,
+body[data-theme='dark'] .visualization-card {
+  background: var(--surface);
+  color: var(--text-strong);
+  box-shadow: var(--shadow);
+  border-color: var(--border);
+}
+
+body[data-theme='dark'] .card-title,
+body[data-theme='dark'] .subtitle,
+body[data-theme='dark'] .metric-label,
+body[data-theme='dark'] .analytics-card-title,
+body[data-theme='dark'] .insight-card p,
+body[data-theme='dark'] .history-table td,
+body[data-theme='dark'] .history-table th {
+  color: var(--text-muted);
+}
+
+body[data-theme='dark'] .history-table thead {
+  background: #111827;
+}
+
+body[data-theme='dark'] .chart-card h3,
+body[data-theme='dark'] .insights-section h3,
+body[data-theme='dark'] .visualization-card h3,
+body[data-theme='dark'] .visualization-header h1,
+body[data-theme='dark'] .dashboard-header h1,
+body[data-theme='dark'] .analytics-header h1,
+body[data-theme='dark'] .history-header h1,
+body[data-theme='dark'] .settings-header h1 {
+  color: var(--text-strong);
+}
